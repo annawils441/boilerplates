@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homepage</title>
+        <link id="theme" rel="stylesheet" type="text/css" href="/static/css/styles-light.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="heading">
+                <img src="static/images/studentlogo.png" alt="GibJohn's Tutoring logo of a graduation cap">
+                <h1 id="GJT-title">GibJohn's Tutoring</h1>
+            </div>
+            <div class="topnav">
+                <a class="active" href="http://127.0.0.1:5000">Home</a>
+                <a class="option" href="http://127.0.0.1:5000/signup">Sign Up</a>
+                <a class="option" href="http://127.0.0.1:5000/login">Login</a>
+                <a class="option" href="http://127.0.0.1:5000/dashboard">Dashboard</a>
+                <a class="option" href="http://127.0.0.1:5000/admin">Admin</a>
+                <button onclick="toggleTheme()" class="option" href="http://127.0.0.1:5000/">Change Page Theme</button>
+                <script>
+                    function toggleTheme() {
+                        let theme = document.getElementById('theme');
+                        if (theme.getAttribute('href') == '/static/css/styles-light.css') {
+                            theme.setAttribute('href', '/static/css/styles-dark.css');
+                        } else {
+                            theme.setAttribute('href', ' /static/css/styles-light.css')
+                        }
+                    }
+                </script>
+            </div>
+        </header>
+        <div id="homepage-container">
+            <div class="homepage-container-child">
+                <h1 id="homepage-title">Learning made simple.</h1>
+            </div>
+            <div class="homepage-container-child">
+                <p id="homepage-subtitle">Find resources, learn and reward students - all in one platform.</p>
+            </div>
+            <div class="homepage-container-child">
+                 <div class="dropdown-more-info"><button class="more-info-btn"><a href="#payment-heading">More Information</a></button>
+                    <div class="dropdown-content-more-info">GibJohn's Tutoring has made the learning platform for you! We have many courses and payment plans to suit your needs. Click to view payment options.</div>
+                 </div>
+            </div>
+        </div>
+        <div id="photo-grid-container">
+            <div class="photo-container">
+                <div class="photo">
+                    <img src="static/images/reshot-img1.jpg" alt="Image of a laptop and two people standing next to it, it is a graphic">
+                   <button class="green-btn"><a href="http://127.0.0.1:5000/resources">Over 200 courses to access.</a></button>
+                </div>
+            </div>
+            <div class="photo-container">
+                <div class="photo">
+                    <img src="static/images/reshot-img2.jpg" alt="Image of a mobile phone filled with textbooks and two people standing next to it, it is a graphic">
+                    <button class="green-btn"><a href="http://127.0.0.1:5000/signup">Access anywhere, anytime.</a></button>
+                </div>
+            </div>
+            <div class="photo-container">
+                <div class="photo">
+                    <img src="static/images/reshot-img3.jpg" alt="Image of someone with a ladder next to a book and someone pointing at it, it is a graphic">
+                    <button class="green-btn"><a href="http://127.0.0.1:5000/rewards">Reward <b>your</b> students.</a></button>
+                </div>
+            </div>
+        </div>
+        <div id="payment-heading">
+            <h1>Payment Options</h1>
+        </div>
+        <div id="payment-container">
+            <div class="payment-child">
+                <h2 class="payment-title">£10.99 per month</h2>
+                <p><b>Benefits:</b></p>
+                <ul>
+                    <li>15 Courses</li>
+                    <li>Up to 10 tutor accounts</li>
+                    <li>Up to 250 students</li>
+                </ul>
+                <button class="payment-btn"><a href="#">Buy Now</a></button>
+            </div>
+            <div class="payment-child">
+                <h2 class="payment-title">£15.99 per month</h2>
+                <p><b>Benefits:</b></p>
+                <ul>
+                    <li>50 Courses</li>
+                    <li>Up to 20 tutor accounts</li>
+                    <li>Up to 500 students</li>
+                </ul>
+                <button class="payment-btn"><a href="#">Buy Now</a></button>
+            </div>
+            <div class="payment-child">
+                <h2 class="payment-title">£19.99 per month</h2>
+                <p><b>Benefits:</b></p>
+                <ul>
+                    <li>100 Courses</li>
+                    <li>Unlimited tutor accounts</li>
+                    <li>Up to 2000 students</li>
+                </ul>
+                <button class="payment-btn"><a href="#">Buy Now</a></button>
+            </div>
+        </div>
+    </body>
+</html>
