@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Sign Up Page</title>
-        <link rel="stylesheet" href="static/css/styles-light.css">
+        <title>Login Page</title>
+        <link id="theme" rel="stylesheet" type="text/css" href="/static/css/styles-light.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -16,11 +16,11 @@
             </div>
             <div class="topnav">
                 <a class="option" href="http://127.0.0.1:5000">Home</a>
-                <a class="active" href="http://127.0.0.1:5000/signup">Sign Up</a>
-                <a class="option" href="http://127.0.0.1:5000/login">Login</a>
+                <a class="option" href="http://127.0.0.1:5000/signup">Sign Up</a>
+                <a class="active" href="http://127.0.0.1:5000/login">Login</a>
                 <a class="option" href="http://127.0.0.1:5000/dashboard">Dashboard</a>
                 <a class="option" href="http://127.0.0.1:5000/admin">Admin</a>
-                <button onclick="toggleTheme()" class="option" href="http://127.0.0.1:5000/signup">Change Page Theme</button>
+                <button onclick="toggleTheme()" class="option" href="http://127.0.0.1:5000/login">Change Page Theme</button>
                 <script>
                     function toggleTheme() {
                         let theme = document.getElementById('theme');
@@ -33,23 +33,13 @@
                 </script>
             </div>
         </header>
-        <div id="signup-container">
-            <h2 id="signup-header">Sign Up</h2>
-            <form action="{{url_for('signup')}}" method="POST">
-                <input type="text" name="user_name" placeholder="Username" required>
+        <div id="login-container">
+            <h2 id="login-header">Login</h2>
+            <form action="{{url_for('login')}}" method="POST">
                 <input type="email" name="user_email" placeholder="User Email" required>
                 <input type="password" name="user_password" placeholder="User Password" required>
-                <select id="user_type" name="user_type" required>
-                    <option value="">Select User Type</option>
-                    <option value="student">Student</option>
-                    <option value="tutor">Tutor</option>
-                    <option value="admin">Admin</option>
-                </select>
-                <input type="date" id="dob" name="user_dob" required>
-                <button type="submit">Create Account</button>
+                <button type="submit">Login</button>
             </form>
-
-
         </div>
     </body>
 </html>
